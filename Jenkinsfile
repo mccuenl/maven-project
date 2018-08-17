@@ -29,6 +29,7 @@ pipeline {
                 timeout(time:5, unit:'DAYS'){
                     input message:'Approve PRODUCTION Deployment?'
                 }
+                sh "'${mvnHome}/bin/mvn' war:war deploy:deploy"
                 build job: 'deploy-to-prod'
             }
             post {
