@@ -20,6 +20,7 @@ pipeline {
         }
         stage ('Deploy to Staging'){
             steps {
+                sh "'${mvnHome}/bin/mvn' war:war deploy:deploy"
                 build job: 'deploy-to-staging'
             }
         }
