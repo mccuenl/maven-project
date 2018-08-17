@@ -56,7 +56,7 @@ pipeline {
                 stage ('Deploy to Staging'){
                     steps {
                         sh "pwd"
-                        sh "rm webapp.war"
+                        sh "rm /Users/Shared/Jenkins/Home/workspace/deploy-to-staging/webapp/webapp.war"
                         sh "cp **/target/*.war /Users/Shared/Jenkins/Home/workspace/deploy-to-staging/webapp/target/"
                     }
                 }
