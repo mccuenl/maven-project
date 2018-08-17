@@ -63,7 +63,8 @@ pipeline {
 
                 stage ("Deploy to Production"){
                     steps {
-                        sh "cp **/target/*.war /Users/Shared/Jenkins/Home/workspace/deploy-to-prod/webapp/target/"
+                        sh "cp **/target/*.war /Users/mccuen/jenkins_files/apache-tomcat-8.5.32-prod/webapps"
+                        //sh "cp **/target/*.war /Users/Shared/Jenkins/Home/workspace/deploy-to-prod/webapp/target/"
                     }
                 }
             }
