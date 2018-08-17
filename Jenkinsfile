@@ -55,9 +55,9 @@ pipeline {
             parallel{
                 stage ('Deploy to Staging'){
                     steps {
-                        sh "pwd"
-                        sh "rm /Users/Shared/Jenkins/Home/workspace/deploy-to-staging/webapp/webapp.war"
-                        sh "cp **/target/*.war /Users/Shared/Jenkins/Home/workspace/deploy-to-staging/webapp/target/"
+                        //sh "pwd"
+                        sh "cp **/target/*.war /Users/mccuen/jenkins_files/apache-tomcat-8.5.32-staging/webapps"
+                        //sh "cp **/target/*.war /Users/Shared/Jenkins/Home/workspace/deploy-to-staging/webapp/target/"
                     }
                 }
 
