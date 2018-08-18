@@ -10,7 +10,7 @@ pipeline {
     stage('Build') {
       steps {
         sh 'mvn clean package'
-        sh "docker build . -t tomcatwebapp:${env.BUILD_ID}"
+        sh "docker build . -t tomcatwebapp:${env.BUILD_ID} -v $(which docker):/usr/bin/docker -v /var/run/docker.sock:/var/run/docker.sock "
       }
     }
   }
